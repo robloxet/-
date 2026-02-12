@@ -5,17 +5,18 @@
     <style>
         body { font-family: sans-serif; text-align: center; background: #f0f0f0; padding-top: 50px; }
         h1 { color: #333; }
-        a { 
-    background: #007bff; 
-    color: white; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    border-radius: 5px; 
+a {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s; /* Теперь плавность работает всегда! */
 }
+
 a:hover {
     background: #0056b3;
-    transform: scale(1.1);
-    transition: 0.3s;
+    transform: scale(1.1); /* Только само действие при наведении */
 }
     </style>
 </head>
