@@ -1,29 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт стиральных машин в Нижнем Новгороде</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background: #f0f0f0; padding-top: 50px; }
-        h1 { color: #333; }
-a {
-    display: inline-block;
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
+        :root { --main-color: #e74c3c; --dark-color: #2c3e50; --light-bg: #f4f7f6; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: bold; font-size: 1.2rem; color: var(--dark-color); }
+        .phone { color: var(--main-color); font-weight: bold; text-decoration: none; font-size: 1.1rem; }
+        
+        .hero { background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com') center/cover; 
+                color: white; padding: 80px 5%; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        
+        .btn { background: var(--main-color); color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; text-decoration: none; transition: 0.3s; }
+        .btn:hover { background: #c0392b; }
 
-a:hover {
-    background: #0056b3;
-    transform: scale(1.1);
-}
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 50px 5%; background: var(--light-bg); }
+        .feat-card { background: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .feat-card h3 { color: var(--main-color); margin-top: 0; }
+
+        .form-section { padding: 50px 5%; text-align: center; }
+        form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        input { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        
+        footer { background: var(--dark-color); color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+        
+        @media (max-width: 600px) { .hero h1 { font-size: 1.8rem; } header { flex-direction: column; } }
     </style>
 </head>
 <body>
-    <h1>Ну чтож я сделал свой первый сайт</h1>
-    <h2>скоро этот сайт станет основой всего</h2>
-    <a href="https://google.com">Перейти в поиск</a>
+
+<header>
+    <div class="logo">ТЕХНО-СЕРВИС НН</div>
+    <a href="tel:+79300000000" class="phone">+7 (930) 000-00-00</a>
+</header>
+
+<section class="hero">
+    <h1>Профессиональный ремонт стиральных машин</h1>
+    <p>Выезд мастера на дом в Нижнем Новгороде за 45 минут. Оригинальные запчасти и гарантия до 2-х лет.</p>
+    <a href="#order" class="btn">Вызвать мастера бесплатно</a>
+</section>
+
+<section class="features">
+    <div class="feat-card">
+        <h3>Цена от 200₽</h3>
+        <p>Честная диагностика. Стоимость ремонта озвучивается до начала работ.</p>
+    </div>
+    <div class="feat-card">
+        <h3>Запчасти в наличии</h3>
+        <p>Склад в Нижнем Новгороде. Ремонт большинства поломок за 1 визит.</p>
+    </div>
+    <div class="feat-card">
+        <h3>Официальная гарантия</h3>
+        <p>Выписываем гарантийный талон на работу и комплектующие.</p>
+    </div>
+</section>
+
+<section id="order" class="form-section">
+    <h2>Оставьте заявку на ремонт</h2>
+    <p>Перезвоним в течение 5 минут и проконсультируем по цене</p>
+    <form action="#">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="+7 (930) 000-00-00" required>
+        <button type="submit" class="btn">Заказать звонок</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2026 Ремонт стиральных машин. Нижний Новгород и область.
+</footer>
+
 </body>
-</html>
+            </html>
+            
